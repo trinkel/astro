@@ -118,7 +118,7 @@ export async function main() {
 
 	// Don't touch the template name if a GitHub repo was provided, ex: `--template cassidoo/shopify-react-astro`
 	const isThirdParty = options.template.includes('/');
-	const templateTarget = options.template.includes('/')
+	const templateTarget = isThirdParty
 		? options.template
 		: `withastro/astro/examples/${options.template}#latest`;
 
